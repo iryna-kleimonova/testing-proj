@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Local storage</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/feedback.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+  </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+    <section class="explore-artists">
+      <p class="artists-desc">Artists</p>
+      <h2 class="artists-title">Explore Your New Favorite Artists</h2>
+      <div id="artistsGrid" class="artist-grid"></div>
+      <button id="loadMoreBtn" class="load-more-btn">
+        Load More <span>↓</span>
+      </button>
+    </section>
+
+    <!-- Модалка -->
+    <div id="artistModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close-btn">&times;</span>
+        <h2 class="artist-title"></h2>
+
+        <div class="artist-header">
+          <img src="" alt="" class="artist-image" />
+
+          <div class="artist-meta-info">
+            <div class="artist-meta-grid">
+              <div>
+                <strong>Years active</strong><br /><span id="years"></span>
+              </div>
+              <div><strong>Sex</strong><br /><span id="sex"></span></div>
+              <div>
+                <strong>Members</strong><br /><span id="members"></span>
+              </div>
+              <div>
+                <strong>Country</strong><br /><span id="country"></span>
+              </div>
+            </div>
+            <strong>Biography</strong>
+            <div class="artist-biography">
+              <p id="bio"></p>
+            </div>
+
+            <div class="artist-tags" id="modal-tags"></div>
+          </div>
+        </div>
+
+        <h3>Albums</h3>
+        <div class="albums-grid" id="albumsGrid"></div>
+      </div>
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Модалка -->
+    <div id="artistModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <div id="artistContent"></div>
+      </div>
+    </div>
+
+    <!-- Підключення Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./js/test-3.js"></script>
+  </body>
+</html>
